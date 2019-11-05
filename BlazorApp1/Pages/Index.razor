@@ -1,0 +1,17 @@
+﻿@using BlazorApp1.Data;
+@page "/"
+
+    <div id="container">
+        @foreach (string style in styleCollection)
+        {
+            <Component style="@style"></Component>
+        }
+    </div>
+
+
+@code {
+    string[] styleCollection = new string[] { "component_Blue",
+                                              "component_Green",
+                                              "component_Orange",
+                                              "component_Yellow" };
+}
