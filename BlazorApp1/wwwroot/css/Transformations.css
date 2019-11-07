@@ -1,13 +1,13 @@
 ﻿.calculator
 {
     display:grid;
-    grid-template-areas: "T T       T       T       T       T           T"
-                         "T lcd     lcd     lcd     lcd     lcd         T"
-                         "T seven   eight   nine    divide  multiply    T"     
-                         "T four    five    six     minus   plus        T"
-                         "T one     two     three   empty   equals      T"
-                         "T zero    zero    dot     empty   equals      T"
-                         "T T       T       T       T       T           T"
+    grid-template-areas: "T T T T T T T"
+                         "T lcd lcd lcd lcd lcd T"
+                         "T seven eight nine divide multiply T"     
+                         "T four five six minus plus T"
+                         "T one two three empty equals T"
+                         "T zero zero dot empty equals T"
+                         "T T T T T T T"
 }
 
 .outline {
