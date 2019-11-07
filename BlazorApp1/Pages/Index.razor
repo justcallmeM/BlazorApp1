@@ -2,16 +2,40 @@
 @page "/"
 
     <div id="container">
-        @foreach (string style in styleCollection)
+        @for(int i = 0; i < styleCollection.Length; i++)
         {
-            <Component style="@style"></Component>
+            <Component style="@styleCollection[i]" model="data.AnimalList[i]"></Component>
         }
     </div>
 
 
 @code {
+
+    Models data = new Models();
+
+    protected override async Task OnInitializedAsync()
+    {
+        Cat cat = new Cat();
+        Dog dog = new Dog();
+        Bird bird = new Bird();
+
+        cat.Name = "Cat";
+        cat.Speed = "15";
+
+        dog.Name = "Dog";
+        dog.Speed = "25";
+
+        bird.Name = "Bird";
+        bird.Speed = "30";
+
+        data.AnimalList.Add(cat);
+        data.AnimalList.Add(dog);
+        data.AnimalList.Add(bird);
+    }
+
     string[] styleCollection = new string[] { "component_Blue",
                                               "component_Green",
                                               "component_Orange",
                                               "component_Yellow" };
+
 }

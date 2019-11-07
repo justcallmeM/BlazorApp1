@@ -5,30 +5,28 @@ using System.Threading.Tasks;
 
 namespace BlazorApp1.Data
 {
-    abstract class Animal
+    public class Bird
     {
         public string Name { get; set; }
-        public virtual string Color { get; set; }
-        public virtual List<string> Limbs { get; set; }
+        public string Speed { get; set; }
     }
 
-    class Bird : Animal
+    public class Dog
     {
-
-    }
-
-    class Dog : Animal
-    {
+        public string Name { get; set; }
+        public string Speed { get; set; }
 
     }
 
-    class Cat: Animal
+    public class Cat
     {
+        public string Name { get; set; }
+        public string Speed { get; set; }
 
     }
 
     public class Models
     {
-        List<object> Animals = new List<object>();
+        public List<object> AnimalList { get; set; }
     }
 }
