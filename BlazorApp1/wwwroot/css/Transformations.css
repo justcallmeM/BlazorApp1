@@ -1,0 +1,96 @@
+﻿.calculator
+{
+    display:grid;
+    grid-template-areas: "T T       T       T       T       T           T"
+                         "T lcd     lcd     lcd     lcd     lcd         T"
+                         "T seven   eight   nine    divide  multiply    T"     
+                         "T four    five    six     minus   plus        T"
+                         "T one     two     three   empty   equals      T"
+                         "T zero    zero    dot     empty   equals      T"
+                         "T T       T       T       T       T           T"
+}
+
+.outline {
+    grid-area: T;
+    background-color: lightgreen;
+}
+
+.lcd {
+    grid-area: lcd;
+    background-color: palevioletred;
+}
+
+.zero {
+    grid-area: zero;
+    background-color: purple;
+}
+
+.one {
+    grid-area: one;
+    background-color: skyblue;
+}
+
+.two {
+    grid-area: two;
+    background-color: aliceblue;
+}
+
+.three {
+    grid-area: three;
+    background-color: bisque;
+}
+
+.four {
+    grid-area: four;
+    background-color: turquoise;
+}
+
+.five {
+    grid-area: five;
+    background-color: peru;
+}
+
+.six {
+    grid-area: six;
+    background-color: whitesmoke;
+}
+
+.seven {
+    grid-area: seven;
+    background-color: salmon;
+}
+
+.eight {
+    grid-area: eight;
+    background-color: blueviolet;
+}
+
+.nine {
+    grid-area: nine;
+    background-color: navajowhite;
+}
+
+.equals {
+    grid-area: equals;
+    background-color: aquamarine;
+}
+
+.plus {
+    grid-area: plus;
+    background-color: palegoldenrod;
+}
+
+.minus {
+    grid-area: minus;
+    background-color: magenta;
+}
+
+.multiply {
+    grid-area: multiply;
+    background-color: limegreen;
+}
+
+.divide {
+    grid-area: divide;
+    background-color: darkblue;
+}

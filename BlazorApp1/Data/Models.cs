@@ -14,7 +14,7 @@ namespace BlazorApp1.Data
 
     class Bird : Animal
     {
-
+        
     }
 
     class Dog : Animal
