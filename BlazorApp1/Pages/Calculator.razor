@@ -1,0 +1,59 @@
+﻿@page "/Calculator"
+@using BlazorApp1.Data;
+
+    <div class="calculator">
+
+        <div class="lcd">@result</div>
+
+        <div class="zero button"     @onclick="@(() => ClickNumber(0))" >0</div>
+        <div class="one button"      @onclick="@(() => ClickNumber(1))">1</div>
+        <div class="two button"      @onclick="@(() => ClickNumber(2))">2</div>
+        <div class="three button"    @onclick="@(() => ClickNumber(3))">3</div>
+        <div class="four button"     @onclick="@(() => ClickNumber(4))">4</div>
+        <div class="five button"     @onclick="@(() => ClickNumber(5))">5</div>
+        <div class="six button"      @onclick="@(() => ClickNumber(6))">6</div>
+        <div class="seven button"    @onclick="@(() => ClickNumber(7))">7</div>
+        <div class="eight button"    @onclick="@(() => ClickNumber(8))">8</div>
+        <div class="nine button"     @onclick="@(() => ClickNumber(9))">9</div>
+
+        <div class="equals button">=</div>
+
+        <div class="divide button">/</div>
+        <div class="multiply button">x</div>
+
+        <div class="plus button">+</div>
+        <div class="minus button">-</div>
+
+        <div class="dot button">.</div>
+
+        <!--outlines-->
+        <div class="outline0"></div>
+        <div class="outline1"></div>
+        <div class="outline2"></div>
+        <div class="outline3"></div>
+        <div class="outline4"></div>
+        <div class="outline5"></div>
+        <div class="outline6"></div>
+        <div class="outline7"></div>
+        <div class="outline8"></div>
+        <div class="outline9"></div>
+        <div class="outline10"></div>
+        <!--outlines-end-->
+    </div>
+
+@code
+{
+    double result { get; set; }
+    string firstNumber { get; set; }
+    string secondNumber { get; set; }
+
+    public EventCallback<int> OnClick { get; set; }
+
+    private void ClickNumber(int value)
+    {
+        firstNumber = firstNumber + value.ToString();
+
+        result = double.Parse(firstNumber);
+    }
+
+}

@@ -58,10 +58,10 @@ namespace BlazorApp1.Data
 
     public class ModelAnimals
     {
-        public List<IAnimal> Animals { get; set; }
+        public List<IAnimal> Animal { get; set; }
         public ModelAnimals()
         {
-            this.Animals = new List<IAnimal>();
+            this.Animal = new List<IAnimal>();
         }
     }
 }

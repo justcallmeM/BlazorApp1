@@ -1,0 +1,22 @@
+﻿@page "/FourColors"
+@using BlazorApp1.Data;
+
+<div id="@style">
+    <div id="@textWrapper">
+        <p>Name: @model.Name</p>
+        <p>Speed: @model.Speed (km/h)</p>
+        <p>Can it bark: @model.CanBark().ToString()</p>
+    </div>
+</div>
+
+@code {
+
+    [Parameter]
+    public string style { get; set; }
+
+    [Parameter]
+    public string textWrapper { get; set; }
+
+    [Parameter]
+    public IAnimal model { get; set; }
+}
