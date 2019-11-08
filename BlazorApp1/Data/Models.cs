@@ -5,28 +5,63 @@ using System.Threading.Tasks;
 
 namespace BlazorApp1.Data
 {
-    public class Bird
+    public interface IAnimal
     {
-        public string Name { get; set; }
-        public string Speed { get; set; }
+        bool CanBark();
+        string Name { get; set; }
+        string Speed { get; set; }
     }
-
-    public class Dog
-    {
-        public string Name { get; set; }
-        public string Speed { get; set; }
-
-    }
-
-    public class Cat
+    public class Bird : IAnimal
     {
         public string Name { get; set; }
         public string Speed { get; set; }
 
+        public bool CanBark()
+        {
+            return false;
+        }
     }
 
-    public class Models
+    public class Dog : IAnimal
     {
-        public List<object> AnimalList { get; set; }
+        public string Name { get; set; }
+        public string Speed { get; set; }
+
+        public bool CanBark()
+        {
+            return false;
+        }
+
+    }
+
+    public class Cat : IAnimal
+    {
+        public string Name { get; set; }
+        public string Speed { get; set; }
+
+        public bool CanBark()
+        {
+            return false;
+        }
+    }
+
+    public class Horse : IAnimal
+    {
+        public string Name { get; set; }
+        public string Speed { get; set; }
+
+        public bool CanBark()
+        {
+            return false;
+        }
+    }
+
+    public class ModelAnimals
+    {
+        public List<IAnimal> Animals { get; set; }
+        public ModelAnimals()
+        {
+            this.Animals = new List<IAnimal>();
+        }
     }
 }
