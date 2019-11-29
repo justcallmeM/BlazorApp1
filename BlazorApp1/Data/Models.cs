@@ -29,7 +29,7 @@ namespace BlazorApp1.Data
 
         public bool CanBark()
         {
-            return false;
+            return true;
         }
 
     }

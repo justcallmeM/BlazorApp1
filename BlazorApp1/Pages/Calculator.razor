@@ -47,8 +47,6 @@
     string firstNumber { get; set; }
     string secondNumber { get; set; }
 
-    public EventCallback<int> OnClick { get; set; }
-
     private void ClickNumber(int value)
     {
         firstNumber = firstNumber + value.ToString();
